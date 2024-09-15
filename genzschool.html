@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen Z School</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Nav Bar */
+        nav {
+            background-color: #007BFF;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .main-content .left-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .main-content .right-content {
+            flex: 1;
+        }
+
+        .main-content h1 {
+            color: #ff6347;
+            font-size: 3em;
+        }
+
+        .main-content h2 {
+            color: #1e90ff;
+            font-size: 1.5em;
+        }
+
+        .main-content p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .main-content .button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .main-content .button:hover {
+            background-color: #218838;
+        }
+
+        .school-video {
+            max-width: 98%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Statistics Section */
+        .statistics {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .statistics div {
+            text-align: center;
+        }
+
+        .statistics div h3 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .statistics div p {
+            font-size: 1.2em;
+            margin: 5px 0 0;
+        }
+
+        /* Styling for Services/Programs */
+        .section {
+            background-color: rgba(255, 248, 220, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            background-color: rgba(0, 191, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Easy Steps Section */
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .steps div {
+            text-align: center;
+            flex: 1;
+        }
+
+        .steps div img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Call to Action Buttons */
+        .cta {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .cta .cta-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .cta .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .footer-col {
+            width: 30%;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-col ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-col p i {
+            margin-right: 10px;
+        }
+
+        hr {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        footer p {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Flexbox for Footer */
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>Gen Z School</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- First Page Layout -->
+    <div class="container">
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Left Side: Text and Buttons -->
+            <div class="left-content">
+                <h1>We Care About Your Education</h1>
+                <h2>Empowering Future Leaders</h2>
+                <p>Welcome to Gen Z School, where innovation and leadership are at the core of everything we do. Join us to
+                    embark on a transformative learning journey that shapes future leaders.</p>
+                <button class="button">Join Us</button>
+            </div>
+
+            <!-- Right Side: School Video -->
+            <div class="right-content">
+                <video class="school-video" controls>
+                    <source src="c:\Users\CEDRIC\Desktop\gen\gen z school video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="statistics">
+            <div>
+                <h3>95%</h3>
+                <p>Graduation Rate</p>
+            </div>
+            <div>
+                <h3>1,500+</h3>
+                <p>Students Enrolled</p>
+            </div>
+            <div>
+                <h3>3,000+</</h3>
+                <p>Alumni Worldwide</p>
+            </div>
+            <div>
+                <h3>100%</h3>
+                <p>College Acceptance</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container">
+        <div class="section">
+            <h2>Our Best Programs</h2>
+            <div class="grid">
+                <div class="grid-item">STEM Education</div>
+                <div class="grid-item">Arts & Humanities</div>
+                <div class="grid-item">Leadership Development</div>
+                <div class="grid-item">Sports & Wellness</div>
+                <div class="grid-item">Technology & Innovation</div>
+                <div class="grid-item">Environmental Science</div>
+                <div class="grid-item">Global Studies</div>
+                <div class="grid-item">Entrepreneurship</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easy Steps Section -->
+    <div class="container">
+        <div class="steps">
+            <div>
+                <p>Step 1: Explore Programs</p>
+            </div>
+            <div>
+                <p>Step 2: Choose Your Path</p>
+            </div>
+            <div>
+                <p>Step 3: Apply Online</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="container">
+        <div class="cta">
+            <button class="cta-button">Schedule a Visit</button>
+            <button class="cta-button">Apply Now</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <!-- About Column -->
+                <div class="footer-col">
+                    <h4>About Gen Z School</h4>
+                    <p>Gen Z School is dedicated to equipping students with the skills and knowledge needed to excel in the modern world. We focus on leadership, innovation, and inclusivity.</p>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>123 Future Leader Lane, Innovation City, ST</p>
+                    <p><i class="fas fa-phone-alt"></i>(555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i>info@genzschool.com</p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Programs</a></li>
+                        <li><a href="#">Student Life</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; 2024 Gen Z School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
